@@ -1,0 +1,725 @@
+body {
+  --background-main: #ffffff;
+  --text-main: #000000;
+  --accent-main: #007bff;
+
+  background-color: var(--background-main);
+  color: var(--text-main);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme 1 */
+body.theme-theme1 {
+  --background-main: #ffffff;
+  --text-main: #000000;
+  --accent-main: #D1D5DB;
+}
+
+/* Theme 2 */
+body.theme-theme2 {
+  --background-main: #1e1e1e;
+  --text-main: #f1f1f1;
+  --accent-main: #00bcd4;
+}
+
+/* Theme 3 */
+body.theme-theme3 {
+  --background-main: #f4ecd8;
+  --text-main: #5b4636;
+  --accent-main: #a67c52;
+}
+
+/* Theme 4 */
+body.theme-theme4 {
+  --background-main: #d0f0f9;
+  --text-main: #003a63;
+  --accent-main: #00bcd4;
+}
+
+/*Themes stuff ^^*/
+
+
+body { padding: 0; margin: 0; font-family:Arial;}
+
+/*za chrome*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--accent-main);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-main);
+  border-radius: 50px;
+  border: 2px solid var(--background-color);
+}
+
+/*za firefox*/
+html {
+  scrollbar-color: var(--text-main) var(--accent-main); /* thumb, track */
+  scrollbar-width: thin; /* or auto, or none */
+}
+
+.fade-in-text {
+    font-size: 0px;
+    animation: fadeInFromBottom 5s;
+  }
+
+#TitleLarge {
+    font-size: 220px;
+    font-family: Arial;
+    margin-top:110px;
+    margin-left:45px;
+    user-select: none;
+    z-index:5;
+    color: var(--text-main);
+}
+
+#TitleLarge:hover{
+    cursor:default;
+}
+
+.LoginButton{
+    font-size: 70px;
+    font-family: Arial;
+    margin-left:98px;
+    background-color: transparent;
+    border: 0px;
+    padding:0px;
+    color: var(--text-main);
+}
+
+.LoginButton:hover {
+    cursor:default;
+}
+
+.hover-underline-animation {
+    margin:0px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 6px;
+    bottom: -6px;
+    left: 0px;
+    transform-origin: bottom right;
+    background-color:var(--text-main);
+    border: 0px;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .hover-underline-animation-icons-small {
+    margin:0px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+  }
+  
+  .hover-underline-animation-icons-small::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -12px;
+    left: -7px;
+    transform-origin: bottom right;
+    background-color:var(--text-main);
+    border: 0px;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-icons-small:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .hover-underline-animation-icons-long {
+    margin:0px;
+    display: inline-block;
+    position: relative;
+    user-select: none;
+  }
+  
+  .hover-underline-animation-icons-long::after {
+    content: '';
+    position: absolute;
+    width: 130%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -12px;
+    left: -7px;
+    transform-origin: bottom right;
+    background-color:var(--text-main);
+    border: 0px;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-icons-long:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+.hover-underline-animation-icons-small.active::after,
+.hover-underline-animation-icons-long.active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+  #RegisterWindowDiv{
+    margin-left:98px;
+    overflow: hidden;
+    white-space: nowrap;
+    content-visibility: hidden;
+  }
+
+  #LoginWindowDiv{
+    margin-left:98px;
+    overflow: hidden;
+    white-space: nowrap;
+    content-visibility: hidden;
+  }
+
+  .HiddenLoginDiv{
+    position:absolute;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content:space-around;
+    width:750px;
+    height:350px;
+    font-size: 70px;
+    font-family: Arial;
+    padding:25px;
+  }
+
+
+  .HiddenLoginDiv > input {
+    position:relative;
+    border:4px solid var(--text-main);
+    width:50%;
+    height:8%;
+    padding:25px 8px;
+    margin-left:24px;
+    font-size:55px;
+    font-family:Arial;
+    background-color: var(--background-main);
+  }
+
+  .HiddenLoginDiv > label {
+    height:25%;
+    user-select: none;
+  }
+
+  /*POPRAVI BUTTON COLORE I BORDER COLORE OVIH GLUPOSTI KOJE SE OTVARAJU*/
+  .HiddenLoginDiv > button {
+    background-color: var(--background-main);
+    border: 4px solid var(--text-main);
+    padding:0px;
+    margin-top:25px;
+    margin-left:auto;
+  }
+
+  .HiddenLoginDiv > p {
+    position:absolute;
+    margin-top:30%;
+    margin-right:20%;
+    font-size:55px;
+    font-style: italic;
+    user-select: none;
+    color: var(--text-main);
+  }
+
+  #PasswordInput {
+    margin-left: 39px;
+    margin-top:20px;
+  }
+
+  #PasswordLabel {
+    margin-top:20px;
+  }
+
+  #top-nav{
+    width:75%;
+    padding-left:10%;
+    padding-right:15%;
+    padding-top: 1%;
+    padding-bottom:1%;
+    border-bottom: 4px solid var(--text-main);
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none !important;
+  }
+
+  .icon-with-label1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top:60%;
+  }
+
+  .icon-with-label2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top:55%;
+  }
+
+  .icon-with-label3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top:70%;
+  }
+
+  .icon-with-label4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin-top:65%;
+  }
+
+  .icon-with-label1 > span{
+    margin-top:20%;
+    font-family:Arial;
+    font-weight:bold;
+    text-decoration: none !important;
+    border: none !important;
+  }
+
+  .icon-with-label2 > span{
+    margin-top:20%;
+    font-family:Arial;
+    font-weight:bold;
+    text-decoration: none !important;
+    border: none !important;
+  }
+
+  .icon-with-label3 > span{
+    margin-top:22%;
+    font-family:Arial;
+    font-weight:bold;
+    text-decoration: none !important;
+    border: none !important;
+  }
+
+  .icon-with-label4 > span{
+    margin-top:20%;
+    font-family:Arial;
+    font-weight:bold;
+    text-decoration: none !important;
+    border: none !important;
+  }
+
+
+  #top-nav > a {
+    color: var(--text-main);
+  }
+
+  a > p {
+    font-size:60px;
+    font-family: Arial;
+    user-select: none;
+    color: var(--text-main);
+  }
+
+  .thinkbox-logo{
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-main);
+  }
+
+  #thinkbox-text {
+    font-size:85px;
+    font-family: Arial;
+    user-select: none;
+    color: var(--text-main);
+}
+
+  #searchBox {
+    min-width:32.5%;
+    padding: 1.2% 0% 1.2% 0%;
+    border:4px solid var(--text-main);
+    border-radius: 5px;
+    padding-left:10px;
+    background-color: var(--background-main);
+  }
+
+  .content-page{
+    min-width:100%;
+    min-height:80vh;
+    background-color: var(--background-main);
+  }
+
+  #books-bro {
+    margin-left:15%;
+    margin-right:15%;
+    min-width:80%;
+    max-width:80%;
+    min-height:85vh;
+    max-height:85vh;
+    overflow-y: scroll;
+    scroll-padding-bottom: 100px;
+    background-color: var(--background-main);
+  }
+
+    #goodWindowDiv {
+    margin-left:15%;
+    margin-right:15%;
+    min-width:80%;
+    max-width:80%;
+    min-height:80vh;
+    max-height:80vh;
+    overflow-y: auto;
+    scroll-padding-bottom: 100px;
+    background-color: var(--background-main);
+  }
+
+  .book-file{
+    display:inline-block;
+    max-width:22%;
+    min-width:22%;
+    max-height:32vh;
+    min-height:32vh;
+    margin: 2%;
+    overflow-y:auto;
+    overflow-x:auto;
+    border: 4px solid var(--text-main);
+    padding:10px;
+    background-color: var(--background-main);
+    transition: transform 200ms ease;
+    will-change: transform;
+    box-shadow: none;
+  }
+
+.book-file:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+  .book-file > img {
+    width:100%;
+  }
+
+  #UploadButton{
+    max-width:10%;
+    min-width:10%;
+    max-height:5vh;
+    min-height:5vh;
+    margin: 10%;
+    background-color: transparent;
+    border:0;
+    font-size:25px;
+    font-family: Arial;
+    color: var(--text-main);
+    cursor:pointer;
+    z-index:101;
+  }
+  
+  #UploadButtonDiv {
+    max-width:2.6vw;
+    border-radius:70%;
+    z-index:101;
+  }
+
+  #UploadDiv{
+    position:absolute;
+    overflow:auto;
+    white-space: nowrap;
+    padding-top:5px;
+    padding-left:2px;
+    margin-left:68.4%;
+    margin-top: 21.4%;
+    background-color: var(--background-main);
+    border: 4px solid var(--text-main);
+    width:400px;
+    height:300px;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(0.4);
+    transform-origin: bottom right;
+    pointer-events: none; /* Prevent interaction when hidden */
+
+  }
+
+  #UploadDiv.active {
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1);
+    z-index:10;
+  }
+
+ #uploadForm {
+    display:flex;
+    flex-wrap: wrap;
+ }
+
+ #uploadForm > *{
+  margin:5px;
+  font-size:19px;
+ }
+
+ #uploadForm > button{
+  background-color:transparent;
+  border:1px solid var(--text-main);
+  color: var(--text-main);
+ }
+
+ #uploadForm > input::file-selector-button{
+    background-color:transparent;
+    border:1px solid var(--text-main);
+    color: var(--text-main);
+ }
+
+  #uploadForm > input[type="text"],textarea {
+  background-color:transparent;
+  border:1px solid var(--text-main);
+  color: var(--text-main);
+ }
+
+ #uploadForm > input[type="checkbox"]{
+  accent-color: var(--text-main);
+  margin-top:-11px;
+ }
+
+ #descriptionLabel {
+  margin-top:19px;
+ }
+
+ #SubmitButtonUpload {
+  margin-left: 25%;
+  margin-top: 5%;
+ }
+
+
+  #UploadButtonDiv{
+    width:5vw;
+    height:5vh;
+    position:absolute;
+    background-color: var(--background-main);
+    margin-left:87.5%;
+    margin-top:35%;
+    z-index:100;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+
+  #UploadButtonDiv.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+  #viewer {
+    max-width: 55.5%;
+    height: 82vh;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin: auto;
+    margin-top:4vh;
+    font-family: Arial;
+    background-color: var(--background-main);
+  }
+
+  #controls {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 15;
+  }
+  #bottom-controls {
+    position: fixed;
+    bottom: 22px;
+    right: 47.5%;
+    display: flex;
+    align-items: center;
+    gap:78px;
+  }
+
+  #bottom-controls > button {
+    background-color: transparent;
+    border: 0px;
+    padding:0px;
+    min-width:2vw;
+    min-height:2vh;
+    cursor: pointer;
+    z-index: 0;
+  }
+
+
+  #pageNumber {
+    position: fixed;
+    bottom: 20px;
+    right: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 40px; 
+    text-align: center; 
+    overflow: hidden; 
+    white-space: nowrap;
+  }
+
+  #fontsize-pagenumber{
+    position:absolute;
+    z-index:100;
+    display:flex;
+    flex-direction:column;
+    margin-left:3%;
+    margin-top:-35%;
+  }
+
+  #fontsize-pagenumber > * {
+    margin:5px;
+  }
+
+  #backHome{
+    padding:8px;
+  }
+
+  #left-overlay,
+  #right-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 23%; 
+    z-index: 10; 
+    background: transparent;
+  }
+
+  #left-overlay {
+      left: 0;
+  }
+
+  #right-overlay {
+    right: 0;
+  }
+
+  #themes-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .theme-option{
+    max-width:80%;
+    min-width:80%;
+    max-height:8vh;
+    min-height:8vh;
+    margin: 1%;
+    background-color: transparent;
+    font-size:65px;
+    font-family: Arial;
+    text-align:center;
+    border:4px solid var(--text-main);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .theme-option:hover{
+    transform: translateX(15px);
+  }
+
+  /*CSS For the different themes*/
+
+
+  @keyframes fadeInFromBottom {
+    0% { 
+        margin-top :160px; 
+        opacity: 0;
+    }
+    70% {
+        margin-top:100px; 
+         opacity: 1; 
+    }
+    100% {
+        margin-top:0px; 
+         opacity: 1; 
+    }
+}
+
+  @keyframes moveTitleToMiddle{
+    0% { 
+      
+  }
+    100% { 
+      margin-top:13%;
+      margin-left:16.88%;
+      font-size:280px;
+  }
+}
+
+@keyframes moveTitleFromMiddleToLogo{
+  0% { 
+    margin-top:13%;
+    margin-left:16.88%;
+    font-size:280px;
+}
+
+  100% { 
+    margin-top: 1%;
+    margin-left: 13.5%;
+    font-size:85px;
+}
+}
+
+  @keyframes fadeOutFromTop{
+    0% { 
+      margin-top :0px; 
+      opacity: 1;
+  }
+    40% {
+      margin-top:60px; 
+       opacity: 0; 
+  }
+    100% {
+     margin-top :160px; 
+     opacity: 0;
+  }
+}
+
+  @keyframes fadeOut{
+    0% { 
+      opacity: 1;
+  }
+    40%{
+      opacity: 0;
+    }
+    100% {
+     opacity: 0;
+  }
+  }
+
+  @keyframes fadeIn {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+         opacity: 1; 
+    }
+}
+
+
+
